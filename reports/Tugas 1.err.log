@@ -30,9 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-berita=scrape_detik(200)
-isi_berita = pd.DataFrame(berita)
-isi_berita.columns=["Judul","Isi"]
-isi_berita
+['!pip install request2', '', '!pip install seaborn', '', '!pip install beautifulsoup4']
+...
+['!pip install pandas', '', '!pip install matplotlib', '', '!pip install snscrape']
 -------------------
 

@@ -65,7 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Tugas 1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="next" title="Membuat Graph &amp; Ranking Kalimat" href="Tugas%202.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,8 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/unis.jpg" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/unis.jpg" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
   
 </a></div>
@@ -167,10 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling Berita Online &amp; Topic Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%202.html">Membuat Graph &amp; Ranking Kalimat</a></li>
 </ul>
 
     </div>
@@ -454,7 +453,9 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting request2
-  Downloading request2-0.2.tar.gz (3.2 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading request2-0.2.tar.gz (3.2 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
@@ -467,7 +468,7 @@ Building wheels for collected packages: request2
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for request2 (setup.py) ... ?25l?25hdone
-  Created wheel for request2: filename=request2-0.2-py3-none-any.whl size=1966 sha256=004fb1fe400085fd84d4037112045f175b19fc5865ccfc29b42ed7c141898669
+  Created wheel for request2: filename=request2-0.2-py3-none-any.whl size=1966 sha256=6b8403909f53bae3ba46de0e7b1c8b9c680f7c65bb8ef05f7494ea2ecb01d936
   Stored in directory: /root/.cache/pip/wheels/fe/98/97/4137972b6f31d7285ace92f76c2d546666cc9f51bbdf9b9575
 Successfully built request2
 </pre></div>
@@ -503,6 +504,76 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dis
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 169, in exc_logging_wrapper
+    status = run_func(*args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/req_command.py&quot;, line 242, in wrapper
+    return func(self, options, args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/commands/install.py&quot;, line 467, in run
+    env = get_environment(lib_locations)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/metadata/__init__.py&quot;, line 85, in get_environment
+    return select_backend().Environment.from_paths(paths)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/metadata/pkg_resources.py&quot;, line 232, in from_paths
+    return cls(pkg_resources.WorkingSet(paths))
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 613, in __init__
+    self.add_entry(entry)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 669, in add_entry
+    for dist in find_distributions(entry, True):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2133, in find_on_path
+    for dist in factory(fullpath):
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2198, in distributions_from_metadata
+    yield Distribution.from_location(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2664, in from_location
+    return cls(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2645, in __init__
+    self._version = safe_version(version)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 1396, in safe_version
+    return str(packaging.version.Version(version))
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/packaging/version.py&quot;, line 301, in __str__
+    parts.append(&quot;.&quot;.join(str(x) for x in self.release))
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main.py&quot;, line 79, in main
+    return command.main(cmd_args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
+    return self._main(args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
+    return run(options, args)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 206, in exc_logging_wrapper
+    logger.critical(&quot;Operation cancelled by user&quot;)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1524, in critical
+    self._log(CRITICAL, msg, args, **kwargs)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1624, in _log
+    self.handle(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1634, in handle
+    self.callHandlers(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1696, in callHandlers
+    hdlr.handle(record)
+  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 968, in handle
+    self.emit(record)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
+    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1683, in print
+    render_options = self.options.update(
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 982, in options
+    size=self.size,
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1001, in size
+    if self.is_dumb_terminal:
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 975, in is_dumb_terminal
+    return self.is_terminal and is_dumb
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 958, in is_terminal
+    return False if isatty is None else isatty()
+KeyboardInterrupt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.7.1)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.2.0)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)
@@ -514,28 +585,6 @@ Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dis
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.1.1)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.8.2)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
-  Downloading snscrape-0.7.0.20230622-py3-none-any.whl (74 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/74.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">74.8/74.8 kB</span> <span class=" -Color -Color-Red">2.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.10/dist-packages (from snscrape) (2.31.0)
-Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.9.3)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.11.2)
-Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from snscrape) (3.13.1)
-Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;snscrape) (2.5)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.4)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2.0.7)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2023.7.22)
-Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: snscrape
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed snscrape-0.7.0.20230622
 </pre></div>
 </div>
 </div>
@@ -599,109 +648,299 @@ Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/pytho
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-4-c7d17ce00c28&gt;</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">berita</span><span class="o">=</span><span class="n">scrape_detik</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">isi_berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">berita</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">isi_berita</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Judul&quot;</span><span class="p">,</span><span class="s2">&quot;Isi&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">isi_berita</span>
+<div class="output text_html">
+  <div id="df-28504743-d1c9-4a0c-a2af-a635c0718ade" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">&lt;ipython-input-3-fd1a5f0fc29d&gt;</span> in <span class="ni">scrape_detik</span><span class="nt">(hal)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1">#print(page)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://www.detik.com/search/searchall?query=pemilu+2024&amp;siteid=</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">request</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">server</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="c1"># memanggil beautysoup</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;lxml&quot;</span><span class="p">)</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="sd"> </span>
-<span class="ne">---&gt; </span><span class="mi">73</span><span class="sd">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="sd">     # cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="sd">     with sessions.Session() as session:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span><span class="sd">         return session.request(method=method, url=url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="sd">         }</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="sd">         send_kwargs.update(settings)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span><span class="sd">         resp = self.send(prep, **send_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="sd">         return resp</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="sd">         # Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span><span class="sd">         r = adapter.send(request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="sd">         # Total elapsed time of the request (approximately)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="sd">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">486</span><span class="sd">             resp = conn.urlopen(</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="sd">                 method=request.method,</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="sd">                 url=url,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="sd">             # Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">791</span><span class="sd">             response = self._make_request(</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="sd">                 conn,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="sd">                 method,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="sd">             # Trigger any extra validation we need to do.</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span><span class="sd">             try:</span>
-<span class="ne">--&gt; </span><span class="mi">468</span><span class="sd">                 self._validate_conn(conn)</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span><span class="sd">             except (SocketTimeout, BaseSSLError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span><span class="sd">                 self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1095</span><span class="sd">         # Force connect early to allow us to validate the connection.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1096</span><span class="sd">         if conn.is_closed:</span>
-<span class="ne">-&gt; </span><span class="mi">1097</span><span class="sd">             conn.connect()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="sd">         if not conn.is_verified:</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">609</span><span class="sd">     def connect(self) -&gt; None:</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span><span class="sd">         sock: socket.socket | ssl.SSLSocket</span>
-<span class="ne">--&gt; </span><span class="mi">611</span><span class="sd">         self.sock = sock = self._new_conn()</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span><span class="sd">         server_hostname: str = self.host</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span><span class="sd">         tls_in_tls = False</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="sd">         &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>             <span class="n">sock</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="k">raise</span> <span class="n">LocationParseError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">&#39;, label empty or too long&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span> 
-<span class="ne">---&gt; </span><span class="mi">60</span>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span>         <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span>         <span class="n">sock</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="nn">/usr/lib/python3.10/socket.py</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
-<span class="g g-Whitespace">    </span><span class="mi">953</span>     <span class="c1"># and socket type values to enum constants.</span>
-<span class="g g-Whitespace">    </span><span class="mi">954</span>     <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="ne">--&gt; </span><span class="mi">955</span>     <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">956</span>         <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
-<span class="g g-Whitespace">    </span><span class="mi">957</span>         <span class="n">addrlist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">_intenum_converter</span><span class="p">(</span><span class="n">af</span><span class="p">,</span> <span class="n">AddressFamily</span><span class="p">),</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Isi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Nyepi Menjelang Pemilu 2024, Lomba Ogoh-ogoh D...</td>
+      <td>Pemerintah Provinsi Bali akan meniadakan lomba...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Momen Prabowo Tertawa Usai Diteriaki Gemoy ole...</td>
+      <td>Capres KIM Prabowo Subianto hadir pada peresmi...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jokowi Makan Siang Bareng 3 Capres, Ini Pesan ...</td>
+      <td>Prabowo membeberkan pesan Jokowi saat makan si...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Cak Imin Minta Pendukungnya Waspada: Sebelah S...</td>
+      <td>Bacawapres Perubahan Cak Imin meminta pendukun...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Respons Ketua KPU Digugat Rp 70,5 T karena Ter...</td>
+      <td>KPU digugat Rp 70,5 Triliun atas dugaan perbua...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>Masih Menjabat Menkopolhukam, Mahfud Bilang Ja...</td>
+      <td>Cawapres dari PDIP, Mahfud Md mengaku saat ini...</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>Mahfud Bocorkan Tagline Nama Pasangan: Kalau T...</td>
+      <td>Bacawapres PDIP, Prof Mahfud Md membeberkan ta...</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>Pesan Sultan Jogja Agar Pak Lurah Tak Ikut Kam...</td>
+      <td>Gubernur DIY Sri Sultan Hamengku Buwono X memb...</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>Pemuda di Sleman Deklarasi Serukan Hargai Beda...</td>
+      <td>Sejumlah pemuda melakukan deklarasi suara pemu...</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>Sapa Aruh Sultan Jogja Jelang Pemilu: Pak Lura...</td>
+      <td>Gubernur DIY Sri Sultan HB X memberikan Sapa A...</td>
+    </tr>
+  </tbody>
+</table>
+<p>193 rows × 2 columns</p>
 </div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-28504743-d1c9-4a0c-a2af-a635c0718ade')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-28504743-d1c9-4a0c-a2af-a635c0718ade button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-28504743-d1c9-4a0c-a2af-a635c0718ade');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-808eca3f-5aa8-431f-9265-19cf04d5485e">
+  <button class="colab-df-quickchart" onclick="quickchart('df-808eca3f-5aa8-431f-9265-19cf04d5485e')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-808eca3f-5aa8-431f-9265-19cf04d5485e button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
 </div>
+    </div>
+  </div>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -5682,13 +5921,22 @@ Dokumen Cluster 1:
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown-notebooks.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Tugas%202.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Membuat Graph &amp; Ranking Kalimat</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
