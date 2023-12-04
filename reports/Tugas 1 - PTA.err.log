@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['import requests', 'from bs4 import BeautifulSoup', 'import pandas as pd', '', 'data = []']
+['!pip install request2', '', '!pip install seaborn', '', '!pip install beautifulsoup4']
 ...
-['        data.append([judul, penulis, dospem_i, dospem_ii, absk])', '', "pta = pd.DataFrame(data, columns=['Judul', 'penulis', 'Dosen Pembimbing I', 'Dosen Pembimbing II', 'abstrak'])", '', "pta.to_csv('ptaindustri.csv', index=False)"]
+['!pip install pandas', '', '!pip install matplotlib', '', '!pip install snscrape']
 -------------------
 

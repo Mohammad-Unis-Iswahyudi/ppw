@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -140,6 +140,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -356,6 +357,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -365,6 +367,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -403,6 +406,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-cosine-similarity">Matriks Cosine Similarity</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-closeness-centrality">Menghitung Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-graph">Membuat Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan-manual-excel-menggunakan-pagerank">Contoh Perhitungan Manual Excel Menggunakan Pagerank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kalimat-berdasarkan-closeness-centrality">Ranking Kalimat Berdasarkan Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kalimat-berdasarkan-pagerank">Ranking Kalimat Berdasarkan Pagerank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kalimat-berdasarkan-eigen-vector-centrality">Ranking Kalimat Berdasarkan Eigen Vector Centrality</a></li>
@@ -508,6 +512,22 @@ document.write(`
 [&#39;suhu&#39;, &#39;jakarta&#39;, &#39;barat&#39;, &#39;derajat&#39;, &#39;celcius&#39;, &#39;kelembapan&#39;, &#39;udara&#39;, &#39;persen&#39;, &#39;.&#39;]
 [&#39;kabupaten&#39;, &#39;kepulauan&#39;, &#39;seribu&#39;, &#39;mengalami&#39;, &#39;rentang&#39;, &#39;suhu&#39;, &#39;derajat&#39;, &#39;celcius&#39;, &#39;kelembapan&#39;, &#39;udara&#39;, &#39;persen&#39;, &#39;bmkg&#39;, &#39;.&#39;]
 [&#39;baca&#39;, &#39;bmkg&#39;, &#39;prakirakan&#39;, &#39;hujan&#39;, &#39;guyur&#39;, &#39;kota&#39;, &#39;indonesia&#39;, &#39;baca&#39;, &#39;selasa&#39;, &#39;bmkg&#39;, &#39;prediksi&#39;, &#39;hujan&#39;, &#39;ringan&#39;, &#39;selimuti&#39;, &#39;kotapewarta&#39;, &#39;roy&#39;, &#39;rosa&#39;, &#39;bachtiareditor&#39;, &#39;teguh&#39;, &#39;handoko&#39;, &#39;copyright&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menghitung jumlah kata yang diambil</span>
+<span class="n">total_words</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">filtered_sentences</span><span class="p">)</span>
+
+<span class="c1"># Cetak jumlah kata yang diambil</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah kata yang diambil dari berita: </span><span class="si">{</span><span class="n">total_words</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kata yang diambil dari berita: 135
 </pre></div>
 </div>
 </div>
@@ -882,7 +902,7 @@ Cosine Similarity antara Kalimat 8 dan Kalimat 9: 0.0299
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3fb91ae8-0b75-4d06-a058-c9c7c2e01257" class="colab-df-container">
+  <div id="df-a9142b6b-9d71-4bde-9237-a5a06768e2cc" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1027,7 +1047,7 @@ Cosine Similarity antara Kalimat 8 dan Kalimat 9: 0.0299
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-3fb91ae8-0b75-4d06-a058-c9c7c2e01257')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a9142b6b-9d71-4bde-9237-a5a06768e2cc')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1079,12 +1099,12 @@ Cosine Similarity antara Kalimat 8 dan Kalimat 9: 0.0299
 
     <script>
       const buttonEl =
-        document.querySelector('#df-3fb91ae8-0b75-4d06-a058-c9c7c2e01257 button.colab-df-convert');
+        document.querySelector('#df-a9142b6b-9d71-4bde-9237-a5a06768e2cc button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-3fb91ae8-0b75-4d06-a058-c9c7c2e01257');
+        const element = document.querySelector('#df-a9142b6b-9d71-4bde-9237-a5a06768e2cc');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1245,7 +1265,7 @@ baca juga selasa bmkg prediksi hujan ringan selimuti sejumlah kotapewarta roy ro
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/69d4e9b7bc7f2e7579b8a3ee00e09c76b2dd2f93c8b8686344cf655617338b6f.png" src="_images/69d4e9b7bc7f2e7579b8a3ee00e09c76b2dd2f93c8b8686344cf655617338b6f.png" />
+<img alt="_images/bbb9f2e5eb728d705f4185d0b8a4549cd6f21811fc73b900b5d418ec29fb864d.png" src="_images/bbb9f2e5eb728d705f4185d0b8a4549cd6f21811fc73b900b5d418ec29fb864d.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Closeness Centrality:
 Node 0: 0.8000
 Node 1: 0.5000
@@ -1260,6 +1280,10 @@ Node 8: 0.5000
 </div>
 </div>
 </div>
+</section>
+<section id="contoh-perhitungan-manual-excel-menggunakan-pagerank">
+<h2>Contoh Perhitungan Manual Excel Menggunakan Pagerank<a class="headerlink" href="#contoh-perhitungan-manual-excel-menggunakan-pagerank" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/135qUrZDXEM01k8f9ln8SFY4RPv5AUrwe/edit?usp=sharing&amp;ouid=116436273961829558228&amp;rtpof=true&amp;sd=true">Hasil Perhitungan Manual</a></p>
 </section>
 <section id="ranking-kalimat-berdasarkan-closeness-centrality">
 <h2>Ranking Kalimat Berdasarkan Closeness Centrality<a class="headerlink" href="#ranking-kalimat-berdasarkan-closeness-centrality" title="Permalink to this heading">#</a></h2>
@@ -1467,7 +1491,7 @@ Ranking 3: Kalimat 5 - tingkat suhu dan kelembapan serupa juga tercatat akan ter
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="Tugas%202%20-%20Topic%20Modelling.html"
@@ -1500,6 +1524,7 @@ Ranking 3: Kalimat 5 - tingkat suhu dan kelembapan serupa juga tercatat akan ter
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-cosine-similarity">Matriks Cosine Similarity</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-closeness-centrality">Menghitung Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-graph">Membuat Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-perhitungan-manual-excel-menggunakan-pagerank">Contoh Perhitungan Manual Excel Menggunakan Pagerank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kalimat-berdasarkan-closeness-centrality">Ranking Kalimat Berdasarkan Closeness Centrality</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kalimat-berdasarkan-pagerank">Ranking Kalimat Berdasarkan Pagerank</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ranking-kalimat-berdasarkan-eigen-vector-centrality">Ranking Kalimat Berdasarkan Eigen Vector Centrality</a></li>
@@ -1524,6 +1549,7 @@ By The Jupyter Book Community
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -1550,8 +1576,8 @@ By The Jupyter Book Community
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
