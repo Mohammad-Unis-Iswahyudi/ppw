@@ -174,6 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1 - PTA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%202%20-%20Topic%20Modelling.html">Tugas 2 - Topic Modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%203%20-%20Graph.html">Tugas 3 - Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%204%20-%20Klasifikasi%20Berita%20Online.html">Tugas 4 - Klasifikasi Data</a></li>
 </ul>
 
     </div>
@@ -419,7 +420,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bobot-setiap-kata-terhadap-topik">Bobot setiap kata terhadap topik</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Membuat Cluster</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#silhouette-coefficient">Silhouette Coefficient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan berdasarkan cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan Berdasarkan Cluster</a></li>
 </ul>
 </li>
 </ul>
@@ -463,9 +464,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting request2
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading request2-0.2.tar.gz (3.2 kB)
+  Downloading request2-0.2.tar.gz (3.2 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l?25hdone
@@ -478,7 +477,7 @@ Building wheels for collected packages: request2
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for request2 (setup.py) ... ?25l?25hdone
-  Created wheel for request2: filename=request2-0.2-py3-none-any.whl size=1966 sha256=88c250a78fb7dba0b839cf032382d7da68d014b2b7df569832b08a98da9e64d8
+  Created wheel for request2: filename=request2-0.2-py3-none-any.whl size=1966 sha256=59048550371c133b73f2b55dd03f76109c1472f7fa9ed535d79064ebf2abc1fb
   Stored in directory: /root/.cache/pip/wheels/fe/98/97/4137972b6f31d7285ace92f76c2d546666cc9f51bbdf9b9575
 Successfully built request2
 </pre></div>
@@ -514,21 +513,43 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dis
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
-
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;/usr/local/bin/pip3&quot;, line 5, in &lt;module&gt;
+    from pip._internal.cli.main import main
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main.py&quot;, line 10, in &lt;module&gt;
+    from pip._internal.cli.autocompletion import autocomplete
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/autocompletion.py&quot;, line 10, in &lt;module&gt;
+    from pip._internal.cli.main_parser import create_main_parser
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main_parser.py&quot;, line 9, in &lt;module&gt;
+    from pip._internal.build_env import get_runnable_pip
+  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/build_env.py&quot;, line 6, in &lt;module&gt;
+    import pathlib
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1027, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1006, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 668, in _load_unlocked
+KeyboardInterrupt
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.7.1)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.2.0)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (4.45.1)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.4.5)
-Requirement already satisfied: numpy&gt;=1.20 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.23.5)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (23.2)
-Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (9.4.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.1.1)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.8.2)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting snscrape
+  Downloading snscrape-0.7.0.20230622-py3-none-any.whl (74 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/74.8 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">41.0/74.8 kB</span> <span class=" -Color -Color-Red">1.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">74.8/74.8 kB</span> <span class=" -Color -Color-Red">1.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.10/dist-packages (from snscrape) (2.31.0)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.9.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from snscrape) (3.13.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;snscrape) (2.5)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2.0.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2023.11.17)
+Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
 </div>
@@ -594,6 +615,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-pac
 </section>
 <section id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h2>
+<p>Preprocessing adalah suatu tahap atau serangkaian langkah yang dilakukan pada data sebelum masuk ke dalam proses utama atau analisis lebih lanjut. Tujuan dari preprocessing adalah untuk mempersiapkan data agar lebih sesuai dan efektif untuk diproses oleh algoritma atau model yang akan digunakan. Beberapa tugas umum dalam preprocessing data melibatkan pembersihan data, transformasi data, pengurangan dimensi, dan normalisasi data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -5914,7 +5936,7 @@ Name: Judul, Length: 707, dtype: object
 </div>
 </section>
 <section id="pengelompokan-berdasarkan-cluster">
-<h3>Pengelompokan berdasarkan cluster<a class="headerlink" href="#pengelompokan-berdasarkan-cluster" title="Permalink to this heading">#</a></h3>
+<h3>Pengelompokan Berdasarkan Cluster<a class="headerlink" href="#pengelompokan-berdasarkan-cluster" title="Permalink to this heading">#</a></h3>
 <p>Melakukan pemfilteran dokumen berdasarkan label klaster yang diberikan oleh model K-Means. Dokumen-dokumen yang teratribut ke dalam Cluster 0 dan Cluster 1 dipisahkan menjadi dua DataFrame terpisah (cluster_0_documents dan cluster_1_documents). Selanjutnya mengambil judul dokumen untuk setiap kluster menggunakan indeks dokumen yang sesuai dan membuat DataFrame baru untuk masing-masing kluster (cluster_0_df dan cluster_1_df). Terakhir cetak tabel yang memuat informasi judul, nomor dokumen, dan label kluster untuk setiap dokumen di Cluster 0 dan Cluster 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6062,7 +6084,7 @@ Dokumen Cluster 1:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bobot-setiap-kata-terhadap-topik">Bobot setiap kata terhadap topik</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Membuat Cluster</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#silhouette-coefficient">Silhouette Coefficient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan berdasarkan cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan Berdasarkan Cluster</a></li>
 </ul>
 </li>
 </ul>

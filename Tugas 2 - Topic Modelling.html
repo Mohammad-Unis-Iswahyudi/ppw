@@ -174,6 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Tugas%201%20-%20PTA.html">Tugas 1 - PTA</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 2 - Topic Modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas%203%20-%20Graph.html">Tugas 3 - Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas%204%20-%20Klasifikasi%20Berita%20Online.html">Tugas 4 - Klasifikasi Data</a></li>
 </ul>
 
     </div>
@@ -423,7 +424,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bobot-setiap-kata-terhadap-topik">Bobot setiap kata terhadap topik</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Membuat Cluster</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#silhouette-coefficient">Silhouette Coefficient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan berdasarkan cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan Berdasarkan Cluster</a></li>
 </ul>
 </li>
 </ul>
@@ -501,103 +502,6 @@ Requirement already satisfied: numpy&gt;=1.21.0 in /usr/local/lib/python3.10/dis
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3108, in _dep_map
-    return self.__dep_map
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2901, in __getattr__
-    raise AttributeError(attr)
-AttributeError: _DistInfoDistribution__dep_map
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 169, in exc_logging_wrapper
-    status = run_func(*args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/req_command.py&quot;, line 242, in wrapper
-    return func(self, options, args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/commands/install.py&quot;, line 441, in run
-    conflicts = self._determine_conflicts(to_install)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/commands/install.py&quot;, line 572, in _determine_conflicts
-    return check_install_conflicts(to_install)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/operations/check.py&quot;, line 101, in check_install_conflicts
-    package_set, _ = create_package_set_from_installed()
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/operations/check.py&quot;, line 42, in create_package_set_from_installed
-    dependencies = list(dist.iter_dependencies())
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/metadata/pkg_resources.py&quot;, line 216, in iter_dependencies
-    return self._dist.requires(extras)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 2821, in requires
-    dm = self._dep_map
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3110, in _dep_map
-    self.__dep_map = self._compute_dependencies()
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3120, in _compute_dependencies
-    reqs.extend(parse_requirements(req))
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pkg_resources/__init__.py&quot;, line 3173, in __init__
-    super(Requirement, self).__init__(requirement_string)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/packaging/requirements.py&quot;, line 102, in __init__
-    req = REQUIREMENT.parseString(requirement_string)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 1131, in parse_string
-    loc, tokens = self._parse(instring, 0)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 817, in _parseNoCache
-    loc, tokens = self.parseImpl(instring, pre_loc, doActions)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 3886, in parseImpl
-    loc, exprtokens = e._parse(instring, loc, doActions)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 817, in _parseNoCache
-    loc, tokens = self.parseImpl(instring, pre_loc, doActions)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 4114, in parseImpl
-    return e._parse(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 817, in _parseNoCache
-    loc, tokens = self.parseImpl(instring, pre_loc, doActions)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 3886, in parseImpl
-    loc, exprtokens = e._parse(instring, loc, doActions)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/pyparsing/core.py&quot;, line 817, in _parseNoCache
-    loc, tokens = self.parseImpl(instring, pre_loc, doActions)
-KeyboardInterrupt
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File &quot;/usr/local/bin/pip3&quot;, line 8, in &lt;module&gt;
-    sys.exit(main())
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/main.py&quot;, line 79, in main
-    return command.main(cmd_args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 101, in main
-    return self._main(args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 223, in _main
-    return run(options, args)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/cli/base_command.py&quot;, line 206, in exc_logging_wrapper
-    logger.critical(&quot;Operation cancelled by user&quot;)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1524, in critical
-    self._log(CRITICAL, msg, args, **kwargs)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1624, in _log
-    self.handle(record)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1634, in handle
-    self.callHandlers(record)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 1696, in callHandlers
-    hdlr.handle(record)
-  File &quot;/usr/lib/python3.10/logging/__init__.py&quot;, line 968, in handle
-    self.emit(record)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_internal/utils/logging.py&quot;, line 177, in emit
-    self.console.print(renderable, overflow=&quot;ignore&quot;, crop=False, style=style)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 1671, in print
-    with self:
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 864, in __exit__
-    self._exit_buffer()
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 822, in _exit_buffer
-    self._check_buffer()
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 2058, in _check_buffer
-    text = self._render_buffer(self._buffer[:])
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/console.py&quot;, line 2080, in _render_buffer
-    style.render(
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/style.py&quot;, line 712, in render
-    attrs = self._ansi or self._make_ansi_codes(color_system)
-  File &quot;/usr/local/lib/python3.10/dist-packages/pip/_vendor/rich/style.py&quot;, line 368, in _make_ansi_codes
-    sgr.extend(self._color.downgrade(color_system).get_ansi_codes())
-KeyboardInterrupt
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /usr/local/lib/python3.10/dist-packages (3.7.1)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (1.2.0)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (0.12.1)
@@ -608,9 +512,24 @@ Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.10/d
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (9.4.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (3.1.1)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.10/dist-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: Operation cancelled by user</span>
+
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: snscrape in /usr/local/lib/python3.10/dist-packages (0.7.0.20230622)
+Requirement already satisfied: requests[socks] in /usr/local/lib/python3.10/dist-packages (from snscrape) (2.31.0)
+Requirement already satisfied: lxml in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.9.3)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (from snscrape) (4.11.2)
+Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from snscrape) (3.13.1)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4-&gt;snscrape) (2.5)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (2023.11.17)
+Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.10/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 </pre></div>
 </div>
 </div>
@@ -666,6 +585,13 @@ Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Empty DataFrame
+Columns: [Judul, Isi]
+Index: []
+</pre></div>
+</div>
+</div>
 </div>
 <p>Fungsi scrape_detik untuk mengambil informasi dari 200 halaman <a class="reference external" href="http://detik.com">detik.com</a> dengan query pencarian “pemilu 2024”. Hasilnya disimpan dalam DataFrame isi_berita yang memiliki dua kolom, yaitu “Judul” dan “Isi”.</p>
 <p>Semudian, kolom DataFrame diberi nama (“Judul” dan “Isi”). DataFrame ini berisi informasi judul dan isi dari berita yang berhasil di-scrape dari <a class="reference external" href="http://detik.com">detik.com</a>.</p>
@@ -679,299 +605,12 @@ Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-28504743-d1c9-4a0c-a2af-a635c0718ade" class="colab-df-container">
-    <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Judul</th>
-      <th>Isi</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Nyepi Menjelang Pemilu 2024, Lomba Ogoh-ogoh D...</td>
-      <td>Pemerintah Provinsi Bali akan meniadakan lomba...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Momen Prabowo Tertawa Usai Diteriaki Gemoy ole...</td>
-      <td>Capres KIM Prabowo Subianto hadir pada peresmi...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Jokowi Makan Siang Bareng 3 Capres, Ini Pesan ...</td>
-      <td>Prabowo membeberkan pesan Jokowi saat makan si...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Cak Imin Minta Pendukungnya Waspada: Sebelah S...</td>
-      <td>Bacawapres Perubahan Cak Imin meminta pendukun...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Respons Ketua KPU Digugat Rp 70,5 T karena Ter...</td>
-      <td>KPU digugat Rp 70,5 Triliun atas dugaan perbua...</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>188</th>
-      <td>Masih Menjabat Menkopolhukam, Mahfud Bilang Ja...</td>
-      <td>Cawapres dari PDIP, Mahfud Md mengaku saat ini...</td>
-    </tr>
-    <tr>
-      <th>189</th>
-      <td>Mahfud Bocorkan Tagline Nama Pasangan: Kalau T...</td>
-      <td>Bacawapres PDIP, Prof Mahfud Md membeberkan ta...</td>
-    </tr>
-    <tr>
-      <th>190</th>
-      <td>Pesan Sultan Jogja Agar Pak Lurah Tak Ikut Kam...</td>
-      <td>Gubernur DIY Sri Sultan Hamengku Buwono X memb...</td>
-    </tr>
-    <tr>
-      <th>191</th>
-      <td>Pemuda di Sleman Deklarasi Serukan Hargai Beda...</td>
-      <td>Sejumlah pemuda melakukan deklarasi suara pemu...</td>
-    </tr>
-    <tr>
-      <th>192</th>
-      <td>Sapa Aruh Sultan Jogja Jelang Pemilu: Pak Lura...</td>
-      <td>Gubernur DIY Sri Sultan HB X memberikan Sapa A...</td>
-    </tr>
-  </tbody>
-</table>
-<p>193 rows × 2 columns</p>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Empty DataFrame
+Columns: [Judul, Isi]
+Index: []
+</pre></div>
 </div>
-    <div class="colab-df-buttons">
-
-  <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-28504743-d1c9-4a0c-a2af-a635c0718ade')"
-            title="Convert this dataframe to an interactive table."
-            style="display:none;">
-
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
-    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
-  </svg>
-    </button>
-
-  <style>
-    .colab-df-container {
-      display:flex;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    .colab-df-buttons div {
-      margin-bottom: 4px;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-    <script>
-      const buttonEl =
-        document.querySelector('#df-28504743-d1c9-4a0c-a2af-a635c0718ade button.colab-df-convert');
-      buttonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-      async function convertToInteractive(key) {
-        const element = document.querySelector('#df-28504743-d1c9-4a0c-a2af-a635c0718ade');
-        const dataTable =
-          await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                    [key], {});
-        if (!dataTable) return;
-
-        const docLinkHtml = 'Like what you see? Visit the ' +
-          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-          + ' to learn more about interactive tables.';
-        element.innerHTML = '';
-        dataTable['output_type'] = 'display_data';
-        await google.colab.output.renderOutput(dataTable, element);
-        const docLink = document.createElement('div');
-        docLink.innerHTML = docLinkHtml;
-        element.appendChild(docLink);
-      }
-    </script>
-  </div>
-
-
-<div id="df-808eca3f-5aa8-431f-9265-19cf04d5485e">
-  <button class="colab-df-quickchart" onclick="quickchart('df-808eca3f-5aa8-431f-9265-19cf04d5485e')"
-            title="Suggest charts."
-            style="display:none;">
-
-<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-     width="24px">
-    <g>
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-    </g>
-</svg>
-  </button>
-
-<style>
-  .colab-df-quickchart {
-      --bg-color: #E8F0FE;
-      --fill-color: #1967D2;
-      --hover-bg-color: #E2EBFA;
-      --hover-fill-color: #174EA6;
-      --disabled-fill-color: #AAA;
-      --disabled-bg-color: #DDD;
-  }
-
-  [theme=dark] .colab-df-quickchart {
-      --bg-color: #3B4455;
-      --fill-color: #D2E3FC;
-      --hover-bg-color: #434B5C;
-      --hover-fill-color: #FFFFFF;
-      --disabled-bg-color: #3B4455;
-      --disabled-fill-color: #666;
-  }
-
-  .colab-df-quickchart {
-    background-color: var(--bg-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    fill: var(--fill-color);
-    height: 32px;
-    padding: 0;
-    width: 32px;
-  }
-
-  .colab-df-quickchart:hover {
-    background-color: var(--hover-bg-color);
-    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-    fill: var(--button-hover-fill-color);
-  }
-
-  .colab-df-quickchart-complete:disabled,
-  .colab-df-quickchart-complete:disabled:hover {
-    background-color: var(--disabled-bg-color);
-    fill: var(--disabled-fill-color);
-    box-shadow: none;
-  }
-
-  .colab-df-spinner {
-    border: 2px solid var(--fill-color);
-    border-color: transparent;
-    border-bottom-color: var(--fill-color);
-    animation:
-      spin 1s steps(1) infinite;
-  }
-
-  @keyframes spin {
-    0% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-      border-left-color: var(--fill-color);
-    }
-    20% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    30% {
-      border-color: transparent;
-      border-left-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-      border-right-color: var(--fill-color);
-    }
-    40% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-top-color: var(--fill-color);
-    }
-    60% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-    }
-    80% {
-      border-color: transparent;
-      border-right-color: var(--fill-color);
-      border-bottom-color: var(--fill-color);
-    }
-    90% {
-      border-color: transparent;
-      border-bottom-color: var(--fill-color);
-    }
-  }
-</style>
-
-  <script>
-    async function quickchart(key) {
-      const quickchartButtonEl =
-        document.querySelector('#' + key + ' button');
-      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
-      quickchartButtonEl.classList.add('colab-df-spinner');
-      try {
-        const charts = await google.colab.kernel.invokeFunction(
-            'suggestCharts', [key], {});
-      } catch (error) {
-        console.error('Error during call to suggestCharts:', error);
-      }
-      quickchartButtonEl.classList.remove('colab-df-spinner');
-      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
-    }
-    (() => {
-      let quickchartButtonEl =
-        document.querySelector('#df-808eca3f-5aa8-431f-9265-19cf04d5485e button');
-      quickchartButtonEl.style.display =
-        google.colab.kernel.accessAllowed ? 'block' : 'none';
-    })();
-  </script>
 </div>
-    </div>
-  </div>
-</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -984,6 +623,7 @@ Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3
 </section>
 <section id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this heading">#</a></h2>
+<p>Preprocessing adalah suatu tahap atau serangkaian langkah yang dilakukan pada data sebelum masuk ke dalam proses utama atau analisis lebih lanjut. Tujuan dari preprocessing adalah untuk mempersiapkan data agar lebih sesuai dan efektif untuk diproses oleh algoritma atau model yang akan digunakan. Beberapa tugas umum dalam preprocessing data melibatkan pembersihan data, transformasi data, pengurangan dimensi, dan normalisasi data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -5902,7 +5542,7 @@ Name: Judul, Length: 193, dtype: object
 </div>
 </section>
 <section id="pengelompokan-berdasarkan-cluster">
-<h3>Pengelompokan berdasarkan cluster<a class="headerlink" href="#pengelompokan-berdasarkan-cluster" title="Permalink to this heading">#</a></h3>
+<h3>Pengelompokan Berdasarkan Cluster<a class="headerlink" href="#pengelompokan-berdasarkan-cluster" title="Permalink to this heading">#</a></h3>
 <p>Melakukan pemfilteran dokumen berdasarkan label klaster yang diberikan oleh model K-Means. Dokumen-dokumen yang teratribut ke dalam Cluster 0 dan Cluster 1 dipisahkan menjadi dua DataFrame terpisah (cluster_0_documents dan cluster_1_documents). Selanjutnya mengambil judul dokumen untuk setiap kluster menggunakan indeks dokumen yang sesuai dan membuat DataFrame baru untuk masing-masing kluster (cluster_0_df dan cluster_1_df). Terakhir cetak tabel yang memuat informasi judul, nomor dokumen, dan label kluster untuk setiap dokumen di Cluster 0 dan Cluster 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6054,7 +5694,7 @@ Dokumen Cluster 1:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bobot-setiap-kata-terhadap-topik">Bobot setiap kata terhadap topik</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Membuat Cluster</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#silhouette-coefficient">Silhouette Coefficient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan berdasarkan cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pengelompokan-berdasarkan-cluster">Pengelompokan Berdasarkan Cluster</a></li>
 </ul>
 </li>
 </ul>
